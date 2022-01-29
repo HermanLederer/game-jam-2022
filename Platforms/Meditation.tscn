@@ -18,10 +18,10 @@ surfaces/0 = {
 }
 
 [sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0, 0, 0, 1 )
+albedo_color = Color( 0.152941, 0.819608, 0.00784314, 1 )
 roughness = 0.17
 
-[node name="Ritual" type="Spatial"]
+[node name="Meditation" type="Spatial"]
 
 [node name="stone_platform" type="Spatial" parent="."]
 
