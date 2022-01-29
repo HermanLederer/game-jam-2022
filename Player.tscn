@@ -4,7 +4,7 @@
 
 [sub_resource type="CylinderMesh" id=2]
 
-[node name="Spatial" type="Spatial"]
+[node name="Player" type="Spatial"]
 script = ExtResource( 1 )
 walkable_layers_body = 2
 walkable_layers_soul = 32
