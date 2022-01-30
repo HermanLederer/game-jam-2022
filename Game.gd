@@ -59,6 +59,8 @@ func _process(delta):
 		if (p.global_transform.origin.distance_to((g.global_transform.origin)) < 0.5):
 			next_level();
 	
+	# Timer
+	# Made specially for D-Jay <3
 	var ms = OS.get_ticks_msec() - _start_t;
 	var m = 0;
 	var s = 0;
