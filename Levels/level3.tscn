@@ -196,7 +196,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 5 )
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 1, 6 )
 
 [node name="Gate" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1 )
 
 [node name="Gate2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 4 )

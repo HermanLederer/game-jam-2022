@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Levels/level1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Levels/Dev.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/level4.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/level3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/level2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/level5.tscn" type="PackedScene" id=7]
 
 [node name="Game" type="Spatial"]
 script = ExtResource( 1 )
@@ -18,4 +21,14 @@ transform = Transform( -4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.1855
 
 [node name="Level" parent="Levels" instance=ExtResource( 2 )]
 
-[node name="Level2" parent="Levels" instance=ExtResource( 4 )]
+[node name="Level2" parent="Levels" instance=ExtResource( 6 )]
+visible = false
+
+[node name="Level3" parent="Levels" instance=ExtResource( 5 )]
+visible = false
+
+[node name="Level4" parent="Levels" instance=ExtResource( 4 )]
+visible = false
+
+[node name="Level5" parent="Levels" instance=ExtResource( 7 )]
+visible = false
