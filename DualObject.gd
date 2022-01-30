@@ -54,6 +54,8 @@ func toggle():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	add_to_group("duality")
+
 	_meshBody = get_child(0)
 	_meshSoul = get_child(1)
 	
@@ -63,7 +65,6 @@ func _ready():
 	switch_to_body()
 
 func _process(delta):
-	if (Input.is_action_just_pressed("ui_accept")): toggle()
 	
 	if (_isAnimating):
 		_t += delta * 10;
