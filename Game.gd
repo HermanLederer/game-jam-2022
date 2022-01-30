@@ -9,6 +9,10 @@ var next_lvl = 0;
 
 var p;
 
+var _start_t = OS.get_ticks_msec()
+
+onready var _timer = $Timer;
+
 func a():
 	levels = get_node("/root/Game/Levels").get_children();
 	for level in levels:
@@ -54,3 +58,22 @@ func _process(delta):
 	if (g):
 		if (p.global_transform.origin.distance_to((g.global_transform.origin)) < 0.5):
 			next_level();
+	
+	var ms = OS.get_ticks_msec() - _start_t;
+	var m = 0;
+	var s = 0;
+	
+	while (ms >= 60000):
+		m += 1;
+		ms -= 60000;
+		
+	while (ms >= 1000):
+		s += 1;
+		ms -= 1000;
+	
+	var outp = str(m) + ":";
+	if (s < 10): outp += "0";
+	outp += str(s) + ":"
+	outp += str(ms);
+	
+	_timer.set_text(outp);

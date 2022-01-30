@@ -55,3 +55,16 @@ visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
+
+[node name="Timer" type="RichTextLabel" parent="."]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 382.0
+margin_bottom = 179.0
+custom_colors/default_color = Color( 0.054902, 0.12549, 0.0862745, 1 )
+tab_size = 7
+text = "0:00"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
