@@ -16,7 +16,7 @@ func a():
 		get_node("/root/Game/Levels").remove_child(level);
 
 func next_level():
-	get_node("/root/Game/Player").transform.origin = Vector3(0, 1, 1);
+	print("Next level")
 
 	var l = get_node("/root/Game/Levels").get_children();
 	for level in l:
@@ -24,6 +24,8 @@ func next_level():
 	
 	get_node("/root/Game/Levels").add_child(levels[next_lvl]);
 	next_lvl += 1;
+
+	get_node("/root/Game/Player").reset();
 	
 
 # Called when the node enters the scene tree for the first time.
@@ -39,9 +41,10 @@ func _ready():
 func _process(delta):
 	if (OS.get_unix_time() > nextSwitch):
 		if (Input.is_action_just_pressed("ui_accept")):
-			var m = get_node("/root/Game/Levels/Level/Meditation");
+			var m = get_node("/root/Game/Levels/").get_child(0).get_node("Meditate");
 			if (m):
-				if (p.transform.origin.distance_to(m.transform.origin) < 1.1 || _isSoul):
+				print(1);
+				if (p.global_transform.origin.distance_to(m.global_transform.origin) < 1.1 || _isSoul):
 					nextSwitch = OS.get_unix_time() + 1
 					_isSoul = !_isSoul;
 					get_tree().call_group("duality", "toggle")
@@ -49,7 +52,5 @@ func _process(delta):
 	var g = get_node("/root/Game/Levels").get_child(0).get_node("Gate2");
 
 	if (g):
-		print(1);
-		if (p.transform.origin.distance_to((g.transform.origin)) < 0.1):
-			
+		if (p.global_transform.origin.distance_to((g.global_transform.origin)) < 0.5):
 			next_level();
