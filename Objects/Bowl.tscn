@@ -5,4 +5,4 @@
 [node name="Bowl" type="Spatial"]
 
 [node name="bowl" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0.8 )
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.75, 0, 0.75 )
