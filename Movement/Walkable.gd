@@ -12,9 +12,7 @@ func disable_bit(mask: int, index: int) -> int:
 	return mask & ~(1 << index)
 
 func _ready():
-	# visible = false;
-
-	print(col.collision_layer)
+	visible = false;
 
 	var layers = 0;
 
@@ -22,5 +20,3 @@ func _ready():
 	if (hasSoul): layers = enable_bit(layers, 5)
 
 	col.collision_layer = layers
-	
-	print(col.collision_layer)
