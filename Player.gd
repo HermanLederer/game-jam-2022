@@ -54,9 +54,9 @@ func _ready():
 func _process(delta):
 	var offset = Vector3.ZERO
 	
-	if (Input.is_action_just_pressed("ui_right")): offset.x -= 1;
-	if (Input.is_action_just_pressed("ui_left")): offset.x = 1;
-	if (Input.is_action_just_pressed("ui_up")): offset.z += 1;
-	if (Input.is_action_just_pressed("ui_down")): offset.z -= 1;
+	if (Input.is_action_just_pressed("ui_right")): offset.z += 1;
+	if (Input.is_action_just_pressed("ui_left")): offset.z -= 1;
+	if (Input.is_action_just_pressed("ui_up")): offset.x += 1;
+	if (Input.is_action_just_pressed("ui_down")): offset.x -= 1;
 	
 	if (offset.length() > 0): move(offset, 1)
